@@ -31,7 +31,7 @@ export function StudentAuth({ onAuthSuccess }) {
   const [fullName, setFullName] = useState('');
   const [studentId, setStudentId] = useState('');
   const [email, setEmail] = useState('');
-  const [major, setMajor] = useState('Computer Science');
+  const [major, setMajor] = useState('Bachelor of Science in Information Technology');
   const [regPassword, setRegPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [agreedToHonorCode, setAgreedToHonorCode] = useState(false);
@@ -43,7 +43,7 @@ export function StudentAuth({ onAuthSuccess }) {
       setLoginPassword('CampusStudent2026!');
     } else {
       setFullName('Sophia Chen');
-      setStudentId('STU-2026-4412');
+      setStudentId('2026-4412');
       setEmail('s.chen@campus.edu');
       setMajor('BSIT');
       setRegPassword('CampusStudent2026!');
@@ -170,8 +170,7 @@ export function StudentAuth({ onAuthSuccess }) {
             {/* Quick Demo Autofill Pill */}
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
               <span className="text-[11px] text-slate-500 flex items-center gap-1">
-                <SparklesIcon className="w-3.5 h-3.5 text-amber-500" />
-                Testing the system?
+                
               </span>
               <button
                 type="button"
@@ -204,7 +203,7 @@ export function StudentAuth({ onAuthSuccess }) {
                       required
                       value={loginIdentifier}
                       onChange={(e) => setLoginIdentifier(e.target.value)}
-                      placeholder="e.g. s.chen@campus.edu or STU-2026-4412"
+                      placeholder="e.g. s.chen@campus.edu or 2026-4412"
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
                     />
                   </div>
@@ -298,7 +297,7 @@ export function StudentAuth({ onAuthSuccess }) {
                         required
                         value={studentId}
                         onChange={(e) => setStudentId(e.target.value)}
-                        placeholder="STU-2026-9921"
+                        placeholder="2026-9921"
                         className="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
                       />
                     </div>
@@ -332,8 +331,11 @@ export function StudentAuth({ onAuthSuccess }) {
                       onChange={(e) => setMajor(e.target.value)}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
                     >
-                      <option value="Bachelor of Science and Information Technology">BSIT</option>
+                      <option value="Bachelor of Science in Information Technology">Bachelor of Science in Information Technology</option>
                       <option value="Business Administration">Business Administration</option>
+                      <option value="Bachelor of Science in Industrial Technology">Bachelor of Science in Industrial Technology</option>
+                      <option value="Bachelor of Secondary Education">Bachelor of Secondary Education</option>
+                      <option value="Bachelor of Technology and Livelihood Education">Bachelor of Technology and Livelihood Education</option>
                     </select>
                   </div>
                 </div>
